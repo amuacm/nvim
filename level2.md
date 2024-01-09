@@ -1,3 +1,3 @@
-# Level 2 Configuration with Neovim
+# Configuring Neovim using Lua
 
 ## Installing Vim via Package Manager
