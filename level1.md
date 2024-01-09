@@ -1,4 +1,4 @@
-# Getting Started with Neovim
+# Configuring Neovim using VimScript
 
 
 ## Step 1 | Installing Neovim
