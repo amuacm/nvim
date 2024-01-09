@@ -4,7 +4,7 @@
 
 Neovim is a text editor that is designed as a fork of Vim, with the goal of improving the codebase, enhancing the user experience, and making it easier to implement plugins and APIs. It aims to be a more performant and maintainable alternative to Vim Neovim offers several advantages over Vim, including a more powerful plugin system, the ability to use the Lua programming language for plugin implementation, and compatibility with Vim plugins with minimal modifications. It also allows for remote procedure calls (RPCs) to extend the functionality of the editor asynchronously through any programming language. Neovim has gained popularity among developers due to its project maintenance, feature improvements, and the ability to write plugins in Lua. It is worth noting that while Neovim offers these advantages, Vim remains a popular and widely used text editor.
 
-## Installing NVIM using Homebrew
+## Installing Neovim using Homebrew
 
 This tutorial assumes that users are using either Linux/WSL or MacOS to install nvim.
 
@@ -29,7 +29,7 @@ Once completed, you should be able to open vim by typing 'nvim' into the termina
 
 ## Next Actions
 
-### Creating nvim configuration folder
+### Creating Neovim configuration folder
 
 Before adding more customization into vim, you will need to create a specific folder neovim to find your settings.
 
