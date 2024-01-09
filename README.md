@@ -6,11 +6,12 @@ Neovim is a text editor that is designed as a fork of Vim, with the goal of impr
 
 ## Installing NVIM using Homebrew
 
-**This tutorial assumes that users are using either Linux/WSL or MacOS to install nvim**
+This tutorial assumes that users are using either Linux/WSL or MacOS to install nvim.
 
 While using apt to install nvim is sufficient, in order to get the most recent updated and the ability to use Lua (explained later), it is necessary to use an additional plugin manager. For this tutorial, we can use homebrew.
 
 ### Installing Homebrew
+(Find more information at https://brew.sh/)
 
 Open up a terminal and type in the following command:
 
@@ -38,4 +39,4 @@ Type the following command into the terminal:
 
 ### Customization
 
-This tutorial will offer to tracks to customize nvim. The first and more simple option is to use Vimscript, the second is to use lua. Both are embedded into vim and will require no other installations beyond plugins. the Vimscipt is simpler, but lua is objectively easier and faster. Choose based off your interest and skill level.
+This tutorial will offer to tracks to customize nvim. The first and more simple option is to use Vimscript, the second is to use lua. Both are embedded into vim and will require no other installations beyond plugins. the Vimscipt is simpler, but lua is objectively more powerful and faster. Choose based off your interest and skill level.
