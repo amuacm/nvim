@@ -54,6 +54,7 @@ call plug#begin()
 
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/ribru17/bamboo.nvim" special colorscheme 
@@ -66,11 +67,10 @@ call plug#end()
 
 :colorscheme bamboo " set colorscheme
 
-nnoremap <C-f> NERDTreeToggle<CR> " remap to use NERDTree
+nnoremap <C-f> :NERDTreeToggle<CR> " remap to use NERDTree
 ```
 
-Next, update the file by typing `:so` the file,
-followed by the command `:PlugInstall`
+Next, save the file and intall the plugins by typing `:PlugInstall` followed by the command `:so` to source the file.
 Your plugins should all update from here.
 
 ## step 6 | using lsp with coqueror of combinations
