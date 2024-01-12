@@ -27,12 +27,48 @@ There are many different settings that can be added to neovim, here are a few es
 :set rnu " line numbers based on distance from cursor, helpful for switching between lines quickly
 :set mouse=a " enable mouse
 
-vnoremap J ":m '>+1<CR>gv=gv" " These remaps allow you to move selected text easily
-vnoremap K ":m '>+1<CR>gv=gv"
+vnoremap K ":m '>+1<CR>gv=gv" " These remaps allow you to move selected text easily
+vnoremap J ":m '>-2<CR>gv=gv"
+
+inoremap <C-c> <Esc> " it's just easier than hitting escape
 ```
 
 ## step 4 | installing a plugin manager
 
+Plugin Managers are useful for adding extra upgrades to nvim to improve the user experience.
+A simple plugin manager is vim plug which can be installed like this:
+
+` sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' `
+
+**NOTE: Only use this command if you are using neovim, vim requires a different command, which can be found at the vim-plug repository: https://github.com/junegunn/vim-plug** 
+
 ## step 5 | essential plugins
 
+After installing vim-plug, return to your init.vim file, and add the following code:
 
+```
+call plug#begin()
+
+Plug 'https://github.com/preservim/nerdtree' " NerdTree
+Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
+Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
+Plug 'https://github.com/ribru17/bamboo.nvim" special colorscheme 
+Plug 'https://github.com/jiangmiao/auto-pairs' " bracket completion
+Plug 'http://github.com/bluz71/alvan/vim-closetag' " HTML tag completion
+
+set encoding=UTF-8
+
+call plug#end()
+
+:colorscheme bamboo " set colorscheme
+
+nnoremap <C-f> NERDTreeToggle<CR> " remap to use NERDTree
+```
+
+Next, update the file by typing `:so` the file,
+followed by the command `:PlugInstall`
+Your plugins should all update from here.
+
+## step 6 | using lsp with coqueror of combinations
