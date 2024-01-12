@@ -73,4 +73,4 @@ nnoremap <C-f> :NERDTreeToggle<CR> " remap to use NERDTree
 Next, save the file and intall the plugins by typing `:PlugInstall` followed by the command `:so` to source the file.
 Your plugins should all update from here.
 
-## step 6 | using lsp with coqueror of combinations
+## step 6 | using lsp with conqueror of combinations
