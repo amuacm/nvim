@@ -59,7 +59,7 @@ Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/ribru17/bamboo.nvim' " special colorscheme 
 Plug 'https://github.com/jiangmiao/auto-pairs' " bracket completion
-Plug 'http://github.com/bluz71/alvan/vim-closetag' " HTML tag completion
+Plug 'http://github.com/alvan/vim-closetag' " HTML tag completion
 
 set encoding=UTF-8
 
