@@ -38,10 +38,10 @@ inoremap <C-c> <Esc> " it's just easier than hitting escape
 Plugin Managers are useful for adding extra upgrades to nvim to improve the user experience.
 A simple plugin manager is vim plug which can be installed like this:
 
-`
+```
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-`
+```
 
 **NOTE: Only use this command if you are using neovim, vim requires a different command, which can be found at the vim-plug repository: https://github.com/junegunn/vim-plug** 
 
