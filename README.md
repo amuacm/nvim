@@ -27,16 +27,4 @@ Now that Homebrew is installed, simply type the following command into the termi
 
 Once completed, you should be able to open vim by typing 'nvim' into the terminal.
 
-## Next Actions
 
-### Creating Neovim configuration folder
-
-Before adding more customization into vim, you will need to create a specific folder neovim to find your settings.
-
-Type the following command into the terminal:
-
-` mkdir ~/.config/nvim `
-
-### Customization
-
-This tutorial will offer to tracks to customize nvim. The first and more simple option is to use Vimscript, the second is to use lua. Both are embedded into vim and will require no other installations beyond plugins. the Vimscipt is simpler, but lua is objectively more powerful and faster. Choose based off your interest and skill level.

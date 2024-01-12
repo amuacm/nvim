@@ -10,9 +10,10 @@ While using homebrew is recommended, neovim can easily be installed using apt:
 
 Once neovim is installed, navigate to your .config folder in the home directory, and create a nvim folder if it does not already exist.
 
-` mkdir ~/.config/nvim `
-
-` cd ~/.config/nvim `
+ ```
+ mkdir ~/.config/nvim
+ cd ~/.config/nvim
+ ```
 
 Now create and enter your init.vim file:
 
