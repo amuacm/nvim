@@ -37,7 +37,7 @@ inoremap <C-c> <Esc> " it's just easier than hitting escape
 ## step 4 | installing a plugin manager
 
 Plugin Managers are useful for adding extra upgrades to nvim to improve the user experience.
-A simple plugin manager is vim plug which can be installed like this:
+A simple plugin manager is vim-plug which can be installed like this:
 
 ```
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -71,7 +71,7 @@ call plug#end()
 nnoremap <C-f> :NERDTreeToggle<CR> " remap to use NERDTree
 ```
 
-Next, save the file and intall the plugins by typing `:PlugInstall` followed by the command `:so` to source the file.
+Next, save the file and install the plugins by typing `:PlugInstall` followed by the command `:so` to source the file.
 Your plugins should all update from here.
 
 ## step 6 | using lsp with conqueror of combinations

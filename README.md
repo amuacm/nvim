@@ -25,6 +25,6 @@ Now that Homebrew is installed, simply type the following command into the termi
 
 ` brew install neovim `
 
-Once completed, you should be able to open vim by typing 'nvim' into the terminal.
+Once completed, you should be able to open the application by typing 'nvim' into the terminal.
 
 
