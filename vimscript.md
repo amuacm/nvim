@@ -53,13 +53,13 @@ After installing vim-plug, return to your init.vim file, and add the following c
 ```
 call plug#begin()
 
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
+Plug 'https://github.com/jiangmiao/auto-pairs' " bracket completion
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/ribru17/bamboo.nvim' " special colorscheme 
-Plug 'https://github.com/jiangmiao/auto-pairs' " bracket completion
 Plug 'http://github.com/alvan/vim-closetag' " HTML tag completion
 
 set encoding=UTF-8
