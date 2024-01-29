@@ -124,7 +124,7 @@ Now, to add completion for a particular language, open a file of that type using
 ```
 
 ### installing a language server
-To install a language server, you will need to use pip, a python management system for python.
+To install a language server, you will need to use pip, a package management system for python.
 
 ```
 sudo apt install python3-pip
