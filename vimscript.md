@@ -75,3 +75,72 @@ Next, save the file and install the plugins by typing `:PlugInstall` followed by
 Your plugins should all update from here.
 
 ## step 6 | using lsp with conqueror of combinations
+
+### install coc plugin
+
+First, add the following repository to your init.vim file:
+
+```
+Plug 'https://github.com/neoclide/coc.nvim'
+```
+be sure to `:PlugInstall` to load the plugin.
+
+### installing node dependencies
+
+install these node dependencies to allow the coc to run properly. 
+NOTE: if you are on macOS, replace apt with port.
+
+```
+sudo apt install nodejs
+```
+
+```
+sudo apt install npm
+```
+
+### building with yarn
+
+Now, change directories and install yarn:
+
+```
+cd plugged/coc.nvim
+sudo npm install -g yarn
+```
+
+Once installed, enter the following command:
+```
+yarn install
+```
+followed by:
+```
+yarn build
+```
+
+### installing completion support
+Now, to add completion for a particular language, open a file of that type using nvim, and enter the following command into the nvim terminal (python can be replaced with any language in that format):
+
+```
+:CocInstall coc-python
+```
+
+### installing a language server
+To install a language server, you will need to use pip, a python management system for python.
+
+```
+sudo apt install python3-pip
+```
+
+Finally, return to the terminal and install the particular language server for the language. python uses the jedi-language-server, so we will install that here:
+
+```
+pip3 install jedi
+```
+
+You should now have code completion added to your python files.
+
+
+
+
+
+
+
