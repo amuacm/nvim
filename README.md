@@ -28,11 +28,12 @@ a more confusing one that also comes in handy is `Ctrl+v` (visual block), which 
 
 vim combines all these motions in a "{command, count} + motion" structure. 
 
-for example: `d2w` -> 'delete 2 words'
-             `dG` -> 'delete to end of file'
-             `c$` -> 'change to end of line'
-             `Vgg` -> 'select to top of file'
-             `3yy` -> '3 line yank'
+for example: 
+`d2w` -> 'delete 2 words'
+`dG` -> 'delete to end of file'
+`c$` -> 'change to end of line'
+`Vgg` -> 'select to top of file'
+`3yy` -> '3 line yank'
 
 ## :Ex commands
 
