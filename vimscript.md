@@ -32,6 +32,9 @@ vnoremap K ":m '>+1<CR>gv=gv" " These remaps allow you to move selected text eas
 vnoremap J ":m '>-2<CR>gv=gv"
 
 inoremap <C-c> <Esc> " it's just easier than hitting escape
+inoremap kj <Esc> " even faster!
+
+inoremap ; : " blazingly fast
 ```
 
 ## step 4 | installing a plugin manager
@@ -66,8 +69,6 @@ set encoding=UTF-8
 
 call plug#end()
 
-:colorscheme bamboo " set colorscheme
-
 nnoremap <C-f> :NERDTreeToggle<CR> " remap to use NERDTree
 ```
 
@@ -91,11 +92,11 @@ install these node dependencies to allow the coc to run properly.
 NOTE: if you are on macOS, replace apt with port.
 
 ```
-sudo apt install nodejs
+sudo apt/brew install nodejs
 ```
 
 ```
-sudo apt install npm
+sudo apt/brew install npm
 ```
 
 ### building with yarn
