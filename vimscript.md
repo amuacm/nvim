@@ -54,7 +54,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 After installing vim-plug, return to your init.vim file, and add the following code:
 
 ```
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
