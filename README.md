@@ -6,7 +6,7 @@ Neovim is a text editor that is designed as a fork of Vim, with the goal of impr
 
 ## Using Vim
 
-Entering --INSERT-- mode can be achieved through: i (insert chr), a (append chr), I (insert line), A (append line).
+Entering --INSERT-- mode can be achieved through: `i` (insert chr), `a` (append chr), `I` (insert line), `A` (append line).
 
 ## Motions
 
@@ -49,10 +49,8 @@ starting with `:%s` will apply the change to the whole file, wheras the regular 
 
 add `/g` will make the change 'global' on a line, and adding 'c' will prompt the user to check for the instance.
 
-finally `/` + any search term will show all instances of a search result, which can be cycled through with `n/N`.
+`/` + any search term will show all instances of a search result, which can be cycled through with `n/N`.
 
-
-
-
+finally, use `.` to repreform a longer command that you have just typed out.
 
 
