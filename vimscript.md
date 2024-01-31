@@ -1,5 +1,4 @@
 # Configuring Neovim using VimScript
-
 ## step 1 | installing neovim
 
 While using homebrew is recommended, neovim can easily be installed using apt:
@@ -26,6 +25,7 @@ There are many different settings that can be added to neovim, here are a few es
 ```
 :set nu " add line numbers
 :set rnu " line numbers based on distance from cursor, helpful for switching between lines quickly
+:set autoindent
 :set mouse=a " enable mouse
 
 vnoremap K :m '>+1<CR>gv=gv " These remaps allow you to move selected text easily
@@ -41,6 +41,8 @@ inoremap ; : " blazingly fast
 
 Plugin Managers are useful for adding extra upgrades to nvim to improve the user experience.
 A simple plugin manager is vim-plug which can be installed like this:
+
+*you may need to install curl before running this command*
 
 ```
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

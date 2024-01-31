@@ -24,6 +24,14 @@ as well as: `u` (undo), `R` (redo), `y` (yank/copy), `p` (paste), `v` (select), 
 
 a more confusing one that also comes in handy is `Ctrl+v` (visual block), which selects vertically over lines instead of on a single line. (use `I/A`, followed by `<Esc>` to add text to all selected files).
 
+Use `>` and `<` on selected text in visual mode to indent text.
+
+to change the indentation amount, add the following line to your init.vim file (explained on vimscript.md).
+
+```
+:set shiftwidth=3
+```
+
 ## combo moves
 
 vim combines all these motions in a "{command, count} + motion" structure. 
