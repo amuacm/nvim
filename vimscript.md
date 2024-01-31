@@ -91,14 +91,15 @@ be sure to `:PlugInstall` to load the plugin.
 ### installing node dependencies
 
 install these node dependencies to allow the coc to run properly. 
-NOTE: if you are on macOS, replace apt with port.
+
+*if you are on macOS, replace apt with port.*
 
 ```
-sudo apt/brew install nodejs
+sudo apt install nodejs
 ```
 
 ```
-sudo apt/brew install npm
+sudo apt install npm
 ```
 
 ### building with yarn
@@ -118,6 +119,9 @@ followed by:
 ```
 yarn build
 ```
+
+#### Troubleshooting:
+*If yarn is not working, you likely are not getting the full package through apt. please refer to the brew.md file of this repository to install npm and nodejs. first, `sudo apt remove` both packages, then install brew and the reinstall those package using `brew install` + package. You should now be able to install yarn.*
 
 ### installing completion support
 Now, to add completion for a particular language, open a file of that type using nvim, and enter the following command into the nvim terminal (python can be replaced with any language in that format):
@@ -140,10 +144,3 @@ pip3 install jedi
 ```
 
 You should now have code completion added to your python files.
-
-
-
-
-
-
-
