@@ -28,8 +28,8 @@ There are many different settings that can be added to neovim, here are a few es
 :set rnu " line numbers based on distance from cursor, helpful for switching between lines quickly
 :set mouse=a " enable mouse
 
-vnoremap K ":m '>+1<CR>gv=gv" " These remaps allow you to move selected text easily
-vnoremap J ":m '>-2<CR>gv=gv"
+vnoremap K :m '>+1<CR>gv=gv " These remaps allow you to move selected text easily
+vnoremap J :m '>-2<CR>gv=gv
 
 inoremap <C-c> <Esc> " it's just easier than hitting escape
 inoremap kj <Esc> " even faster!
