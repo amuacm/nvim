@@ -71,6 +71,8 @@ set encoding=UTF-8
 
 call plug#end()
 
+:colorscheme elflord
+
 nnoremap <C-f> :NERDTreeToggle<CR> " remap to use NERDTree
 ```
 
