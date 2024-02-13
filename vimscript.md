@@ -23,7 +23,7 @@ Now create and enter your init.vim file:
 There are many different settings that can be added to neovim, here are a few essentals:
 
 ```
-:set nu " add line numbers
+:set nu " add line number
 :set rnu " line numbers based on distance from cursor, helpful for switching between lines quickly
 :set autoindent
 :set mouse=a " enable mouse
