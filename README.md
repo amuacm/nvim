@@ -60,5 +60,3 @@ add `/g` will make the change 'global' on a line, and adding 'c' will prompt the
 `/` + any search term will show all instances of a search result, which can be cycled through with `n/N`.
 
 finally, use `.` to repreform a longer command that you have just typed out.
-
-
