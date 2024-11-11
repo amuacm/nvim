@@ -2,61 +2,116 @@
 
 ## Introduction
 
-Neovim is a text editor that is designed as a fork of Vim, with the goal of improving the codebase, enhancing the user experience, and making it easier to implement plugins and APIs. It aims to be a more performant and maintainable alternative to Vim Neovim offers several advantages over Vim, including a more powerful plugin system, the ability to use the Lua programming language for plugin implementation, and compatibility with Vim plugins with minimal modifications. It also allows for remote procedure calls (RPCs) to extend the functionality of the editor asynchronously through any programming language. Neovim has gained popularity among developers due to its project maintenance, feature improvements, and the ability to write plugins in Lua. It is worth noting that while Neovim offers these advantages, Vim remains a popular and widely used text editor.
+Neovim is a modern, extensible text editor designed as a fork of Vim, aiming to improve the user experience, codebase, and plugin system. Neovim offers powerful features, including the ability to implement plugins in the Lua programming language, support for asynchronous workflows via remote procedure calls (RPCs), and compatibility with most Vim plugins with minimal modifications. Due to its performance improvements and modern features, Neovim has gained popularity among developers, while Vim remains a widely-used editor. 
 
-## Using Vim
+## Installing Neovim
 
-Entering --INSERT-- mode can be achieved through: `i` (insert chr), `a` (append chr), `I` (insert line), `A` (append line).
-
-## Motions
-
-the basic motions in vim are `h`, `j`,`k`,`l` (left, down, right, up).
-
-the next most basic and common are using `w` (word), `b` (back word), `e` (end word).
-To move around on a line are commands like `^` (front line), `$` (end line), `%` (toggle brackets).
-
-some advanced motions are `G` (top file), `g` (bottom file), `H` (top window), `L` (bottom window).
-
-## Commands
-
-the most basic commands are: `x` (delete chr), `r` (replace), `c` (change), `d`+motion (delete motion), `X` (backspace);
-as well as: `u` (undo), `R` (redo), `y` (yank/copy), `p` (paste), `v` (select), `V` (select line).
-
-a more confusing one that also comes in handy is `Ctrl+v` (visual block), which selects vertically over lines instead of on a single line. (use `I/A`, followed by `<Esc>` to add text to all selected files).
-
-Use `>` and `<` on selected text in visual mode to indent text.
-
-to change the indentation amount, add the following line to your init.vim file (explained on vimscript.md).
+To install neovim, update your system and install `nvim`
 
 ```
-:set shiftwidth=3
+sudo apt update
+sudo apt install nvim
 ```
 
-## combo moves
+## Entering Insert Mode
 
-vim combines all these motions in a "{command, count} + motion" structure. 
+In **Neovim** (and Vim), you can enter `--INSERT--` mode in several ways:
 
-for example...
+- `i` - Insert at the current character
+- `a` - Append after the current character
+- `I` - Insert at the start of the line
+- `A` - Append at the end of the line
 
-`d2w` -> 'delete 2 words'
+## Basic Motions
 
-`dG` -> 'delete to end of file'
+Navigate text with basic motion commands:
 
-`c$` -> 'change to end of line'
+- `h`, `j`, `k`, `l` - Move **left**, **down**, **up**, **right**
+- `w` - Move to the start of the **next word**
+- `b` - Move **back** to the start of the previous word
+- `e` - Move to the **end** of the current word
+- `^` - Move to the **start** of the line
+- `$` - Move to the **end** of the line
+- `%` - Jump between matching **brackets** or **parentheses**
 
-`Vgg` -> 'select to top of file'
+### Advanced Motions
 
-`3yy` -> '3 line yank'
+- `G` - Jump to the **end** of the file
+- `gg` - Jump to the **top** of the file
+- `H` - Move to the **top** of the window
+- `L` - Move to the **bottom** of the window
 
-## :Ex commands
+## Editing Commands
 
-basic commands: `:w` (write/save file), `:q` (quit), `:wq` (write & quit).
+Here are some essential editing commands in Neovim:
 
-another common command in to search and replace: `:s/old/new`
-starting with `:%s` will apply the change to the whole file, wheras the regular `:s` will only be for the first instance of the change on a line or a selection.
+- `x` - **Delete** character under cursor
+- `r` - **Replace** character under cursor
+- `d` + motion - **Delete** according to motion (e.g., `dw` deletes a word)
+- `c` + motion - **Change** according to motion (similar to delete, but enters Insert mode)
+- `y` + motion - **Yank (copy)** text according to motion
+- `p` - **Paste** after the cursor
+- `u` - **Undo** the last change
+- `Ctrl + r` - **Redo** the undone change
+- `v` - Enter **visual mode** (select text by character)
+- `V` - Enter **line visual mode** (select by line)
+- `Ctrl + v` - Enter **block visual mode** (select vertically over lines)
 
-add `/g` will make the change 'global' on a line, and adding 'c' will prompt the user to check for the instance.
+### Advanced Editing Techniques
 
-`/` + any search term will show all instances of a search result, which can be cycled through with `n/N`.
+- Use `.` to **repeat the last command**, which is helpful for repeating complex edits.
+- In visual mode, `>` and `<` indent and outdent selected lines.
 
-finally, use `.` to repreform a longer command that you have just typed out.
+### Visual Block Editing
+
+The `Ctrl + v` command enters **visual block** mode, allowing you to select vertically across multiple lines.
+
+1. Select a column of text using `Ctrl + v`.
+2. Use `I` or `A` to **insert** or **append** text across the selected lines.
+3. Press `<Esc>` to apply the change to all lines.
+
+## Combining Commands and Motions
+
+In Neovim, commands can be combined with counts and motions to create powerful edits:
+
+- `d2w` - **Delete** the next 2 words
+- `dG` - **Delete** to the end of the file
+- `c$` - **Change** to the end of the line
+- `Vgg` - **Select** to the top of the file
+- `3yy` - **Yank** (copy) 3 lines
+
+## Ex Commands (Command-line Mode)
+
+Neovim supports **Ex commands** for saving, quitting, and advanced file manipulation:
+
+- `:w` - **Write (save)** file
+- `:q` - **Quit** file
+- `:wq` - **Write and quit** file
+
+### Search and Replace
+
+- **Basic Replace**: `:s/old/new` - Replaces `old` with `new` on the current line.
+- **Global Replace**: `:%s/old/new/g` - Replaces `old` with `new` throughout the entire file.
+- **Confirm Replace**: Add `c` to prompt for each replacement (e.g., `:%s/old/new/gc`).
+
+### Searching Text
+
+- **Search**: `/pattern` - Search forward for `pattern`.
+- **Cycle Search Results**: `n` (next) and `N` (previous) to navigate results.
+
+## Useful Neovim Features
+
+Neovim provides additional capabilities and settings:
+
+- **Split Windows**:
+  - `:vsp filename` - Open `filename` in a **vertical split**
+  - `:sp filename` - Open `filename` in a **horizontal split**
+
+- **Window Navigation**:
+  - `Ctrl + w h/j/k/l` - Move to the left/down/up/right window
+  - `Ctrl + w w` - Cycle through open windows
+
+- **Tabs**:
+  - `:tabnew filename` - Open a file in a **new tab**
+  - `gt` - Go to the **next tab**
+  - `gT` - Go to the **previous tab**

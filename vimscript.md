@@ -1,11 +1,6 @@
-# Configuring Neovim using VimScript
-## step 1 | installing neovim
+# configuring neovim using vimscript
 
-While using homebrew is recommended, neovim can easily be installed using apt:
-
-` sudo apt install neovim `
-
-## step 2 | Creating an init.vim file
+## step 1 | creating an init.vim file
 
 Once neovim is installed, navigate to your .config folder in the home directory, and create a nvim folder if it does not already exist.
 
@@ -18,7 +13,7 @@ Now create and enter your init.vim file:
 
 `nvim init.vim`
 
-## step 3 | essential remaps and preferences
+## step 2 | essential remaps and preferences
 
 There are many different settings that can be added to neovim, here are a few essentals:
 
@@ -37,7 +32,7 @@ inoremap kj <Esc> " even faster!
 inoremap ; : " blazingly fast
 ```
 
-## step 4 | installing a plugin manager
+## step 3 | installing a plugin manager
 
 Plugin Managers are useful for adding extra upgrades to nvim to improve the user experience.
 A simple plugin manager is vim-plug which can be installed like this:
